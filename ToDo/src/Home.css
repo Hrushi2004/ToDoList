@@ -1,0 +1,134 @@
+body {
+  background-color: #696969; /* Grey background color */
+}
+
+.container {
+  position: relative;
+  width: 600px; /* Adjust width as needed */
+  margin: 0 auto;
+}
+
+.wrapper {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s ease; /* Add transition effect for movement */
+  margin-left: -470px;
+  margin-top: 10px;
+}
+
+.arrow {
+  cursor: pointer;
+  z-index: 2; /* Ensure arrow is above fields */
+  justify-content: center;
+  position: relative;
+  padding: 5px 10px; /* Adjust padding to make it look like a button */
+  border: 1px solid #333; /* Add border for button appearance */
+  background-color: #fff; /* Set background color */
+  color: #333; /* Set text color */
+  border-radius: 5px; /* Add border radius for rounded corners */
+  font-size: 26px; /* Adjust font size */
+  width: 100px;
+  height: 40px; /* Fixed width to ensure consistent size */
+  text-align: center; /* Center text horizontally */
+  transition: background-color 0.3s, color 0.3s; /* Add transition for hover effect */
+}
+
+.arrow:hover {
+  background-color: #000; /* Change background color on hover */
+  color: #fff; /* Change text color on hover */
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px; /* Adjust distance from arrow */
+  opacity: 0;
+  transition: opacity 0.5s ease; /* Add transition effect for fields */
+  z-index: 1; /* Ensure fields are below arrow */
+  font-family: cursive;
+}
+
+.fields.visible {
+  opacity: 1;
+}
+
+.heading {
+  position: absolute;
+  margin-top: -200px;
+
+  margin-left: 300px;
+  font-family: cursive;
+
+}
+
+.Task {
+  display: flex;
+  align-items: center;
+}
+
+.Task input[type="text"],
+.Task button {
+  font-family: cursive;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.Task input[type="text"] {
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  flex: 1; /* To allow input field to grow */
+}
+
+.Task button {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  cursor: pointer;
+}
+
+.Task button:hover {
+  background-color: #000; /* Change background color on hover */
+  color: #fff; 
+}
+
+.todo-table {
+  width: 100%; /* Adjust width as needed */
+  border-collapse: collapse; /* Collapse table borders */
+  margin-top: 20px; 
+  background-color: #000;/* Adjust margin from the heading */
+}
+
+.todo-table th,
+.todo-table td {
+  border: 1px solid #ccc; /* Add border for cells */
+  padding: 8px; /* Add padding for content */
+  text-align: left; /* Align text to the left */
+}
+
+.todo-table th {
+  background-color: #777676; /* Background color for header row */
+}
+
+.todo-table tbody tr:nth-child(even) {
+  background-color: #777676; /* Background color for even rows */
+}
+
+.even-row {
+  background-color: #f2f2f2; /* Alternate row color */
+}
+
+.odd-row {
+  background-color: #535151; /* Alternate row color */
+}
+
+.icon-space {
+  margin-right: 10px; /* Add space between icons */
+}
+
+/* Additional styling for message when there are no todos */
+.heading h2 {
+  color: #fff; /* Change text color */
+}
