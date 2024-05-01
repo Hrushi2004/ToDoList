@@ -1,7 +1,8 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
-const TodoModel = require('./Models/Todo');
+// Import necessary modules using ES module syntax
+import express from 'express';
+import mongoose from 'mongoose';
+import cors from 'cors';
+import TodoModel from './Models/Todo.js'; // Assuming TodoModel is exported from Todo.js
 
 const app = express();
 app.use(cors());
